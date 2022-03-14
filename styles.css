@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --black-bg-color: #010206;
+    --main-orange: #F55322;
+    --white: #fff;
+    --semi-bold: 500;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--black-bg-color);
+    margin: 40px 115px;
+    font-family: Rubik, sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+div.links{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a.login{
+    border: 1px solid var(--main-orange);
+    padding: 5px 20px;
+    transition: .3s all ease-in;
+}
+a.login:hover{
+    background-color: var(--main-orange);
+    color: var(--white);
+}
