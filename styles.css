@@ -3,7 +3,10 @@
     --black-bg-color: #010206;
     --main-orange: #F55322;
     --white: #fff;
-    --semi-bold: 500;
+    --semi-bold: 600;
+    --medium-weight: 500;
+    --regular-weight: 400;
+    
 }
 *{
     margin: 0;
@@ -14,15 +17,35 @@ body{
     margin: 40px 115px;
     font-family: Rubik, sans-serif;
 }
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 a{
     text-decoration: none;
     color: white;
     font-size: 14px;
+    transition: .3s all ease;
+}
+a:hover{
+    color: #F55322;
+}
+.fa-brands:hover{
+    color: var(--main-orange);
+    cursor: pointer;
+}
+.btn{
+    color: var(--white);
+    background-color: var(--main-orange);
+    font-family: Rubik, sans-serif;
+    padding: 10px 20px;
+    border: 1px solid var(--main-orange);
+}
+.btn:hover{
+    cursor: pointer;
+}
+/* Styles for navbar */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 div.links{
     width: 50%;
@@ -39,3 +62,56 @@ a.login:hover{
     background-color: var(--main-orange);
     color: var(--white);
 }
+
+/* styles for hero div */
+
+div.hero{
+    color: white;
+    display: flex;
+}
+div.hero img{
+    height: 90vh;
+}
+div.hero__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+.hero__text h2{
+    font-weight: var(--medium-weight);
+    font-size: 18px;
+    margin-bottom:2rem;
+}
+.hero__text h1{
+    font-weight: bolder;
+    font-size: 60px;
+    margin-bottom: 1rem;
+}
+div.social__icons{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+div.buttons{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0 4rem 0;
+}
+div.buttons .btn{
+    border-radius: 20px;
+}
+.fa-chevron-down{
+    color: #c5c5c5;
+    padding: 6px 7px;
+    border-radius: 50%;
+    background-color: #3C3B40;
+    cursor: pointer;
+    font-size: 10px;
+    transform: translateX(50%);
+}
+
+/* Styles for about me */
+
