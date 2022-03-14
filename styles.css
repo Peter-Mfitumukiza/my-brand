@@ -6,16 +6,21 @@
     --semi-bold: 600;
     --medium-weight: 500;
     --regular-weight: 400;
-    
+    --secondary-black: #11141B;
+    --main-yellow: #FFC208;
+    --gray-text: #C3C3C3;
 }
 *{
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: var(--black-bg-color);
-    margin: 40px 115px;
     font-family: Rubik, sans-serif;
+    color: var(--white);
 }
 a{
     text-decoration: none;
@@ -40,12 +45,51 @@ a:hover{
 .btn:hover{
     cursor: pointer;
 }
+nav, div.hero, div.about__me{
+    padding: 0 115px;
+}
+
+button.halved__button{
+    background-color: #22252C;
+    width: 87px;
+    white-space: nowrap;
+    margin-top: 4rem;
+    padding: 10px;
+    border: 0;
+    color: white;
+    font-weight: var(--regular-weight);
+    transition: .4s width ease;
+}
+button.halved__button:hover{
+    width: max-content;
+}
+
+/* Main headings */
+.main__heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+.main__heading h1{
+    font-size: 40;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.main__heading div.underline{
+    border-bottom: 2px solid var(--white);
+    width: 10%;
+    height: 1px;
+}
+
 /* Styles for navbar */
 
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 40px;
 }
 div.links{
     width: 50%;
@@ -115,3 +159,34 @@ div.buttons .btn{
 
 /* Styles for about me */
 
+div.about__me{
+    padding: 60px 115px;
+    background-color: var(--secondary-black);
+}
+div.about__container{
+    display: flex;
+    justify-content: space-between;
+}
+div.about__me img, div.about__me .about__text{
+    width: 46%;
+}
+.about__text h1{
+    font-size: 25px;
+}
+span.name{
+    color: var(--main-yellow);
+}
+span.role{
+    color: var(--gray-text);
+    font-weight: var(--regular-weight);
+    letter-spacing: 5px;
+    margin-top: .5rem;
+    display: block;
+}
+.about__text p{
+    margin-top: 1rem;
+    font-weight: var(--regular-weight);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 2rem;
+}
