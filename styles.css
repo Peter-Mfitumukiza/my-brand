@@ -45,24 +45,37 @@ a:hover{
 .btn:hover{
     cursor: pointer;
 }
-nav, div.hero, div.about__me{
+.halved__btn{
+    padding: 10px 20px;
+    white-space: nowrap;
+    background-color: #22252C;
+    border: 0;
+    color: white;
+    font-size: 15px;
+    font-weight: var(--regular-weight);
+    cursor:pointer;
+    transition: .5s width ease;
+    letter-spacing: 2px;
+}
+nav, div.hero, div.about__me, div.my__skills{
     padding: 0 115px;
 }
 
-button.halved__button{
-    background-color: #22252C;
-    width: 87px;
-    white-space: nowrap;
-    margin-top: 4rem;
+div.halved__button{
+    width: fit-content;
+    height: fit-content;
     padding: 10px;
-    border: 0;
-    color: white;
-    font-weight: var(--regular-weight);
-    transition: .4s width ease;
 }
-button.halved__button:hover{
-    width: max-content;
+div.halved__button p{
+    margin: 0;
 }
+div.halved__button .bg__div{
+    background-color: #b2c4ec;    
+    width: 100%;
+    height: 100%;
+}
+
+
 
 /* Main headings */
 .main__heading{
@@ -159,7 +172,7 @@ div.buttons .btn{
 
 /* Styles for about me */
 
-div.about__me{
+div.about__me, div.my__skills{
     padding: 60px 115px;
     background-color: var(--secondary-black);
 }
@@ -189,4 +202,40 @@ span.role{
     font-size: 14px;
     line-height: 1.5;
     margin-top: 2rem;
+}
+button.download__cv{
+    margin-top: 4rem;
+    width: 125px;
+}
+button.download__cv:hover{
+    width: 200px;
+}
+
+/* Styles for My skills */
+
+div.my__skills{
+    margin-top: 1rem;
+}
+div.skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+div.skill{
+    width: 45%;
+    margin-bottom: 2rem;
+}
+div.skill__texts{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+div.white__line{
+    background-color: var(--white);
+    height: 4px;
+}
+div.orange__line{
+    background-color: var(--main-orange);
+    height: 4px;
+    transform: translateY(-100%);
 }
