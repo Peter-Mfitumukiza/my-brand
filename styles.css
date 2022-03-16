@@ -31,6 +31,12 @@ a{
 a:hover{
     color: #F55322;
 }
+.fa-bars{
+    font-size: 25px;
+}
+a.bars{
+    display: none;
+}
 .fa-brands:hover{
     color: var(--main-orange);
     cursor: pointer;
@@ -213,9 +219,6 @@ button.download__cv:hover{
 
 /* Styles for My skills */
 
-div.my__skills{
-    margin-top: 1rem;
-}
 div.skills{
     display: flex;
     flex-wrap: wrap;
@@ -311,7 +314,6 @@ div.services__container{
 div.icon__container{
     background-color: #22252E;
     width: fit-content;
-    /* padding: 1rem; */
     width: 50px;
     height: 50px;
     border-radius: 5px;
@@ -357,6 +359,139 @@ div.service h2{
     margin: 2rem 0;
 }
 
-@media screen {
+@media only screen and (max-width: 430px) {
+    div.links{
+        display: none;
+    }
+    a.bars{
+        display: block;
+    }
+    nav, div.hero, div.about__me, div.my__skills, div.my_projects, div.my__services{
+        padding: 0 30px;
+    }
+    div.hero{
+        flex-direction: column;
+        align-items: center;
+    }
+    div.hero__text{
+        width: 100%;
+    }
+    .hero__text h2{
+        font-size: 15px;
+        margin-bottom:2rem;
+        letter-spacing: 2px;
+    }
+    .hero__text h1{
+        font-size: 33px;
+        margin-bottom: 1rem;
+    }
+    div.social__icons{
+        width: 60%;
+    }
+    div.buttons{
+        width: 70%;
+        margin: 2rem;
+    }
+    .fa-chevron-down{
+        color: #c5c5c5;
+        padding: 6px 7px;
+        border-radius: 50%;
+        background-color: #3C3B40;
+        cursor: pointer;
+        font-size: 10px;
+        transform: translateX(50%);
+        margin-bottom: 3rem;
+    }
+    div.about__me, div.my__skills, div.my__services, div.my__projects{
+        padding: 30px;
+    }
+    div.about__container{
+        flex-direction: column;
+    }
+    div.about__me img, div.about__me .about__text{
+        width: 100%;
+    }
+    .about__text h1{
+        font-size: 25px;
+        margin-top: 1rem;
+    }
+    span.role{
+        font-size: 13px;
+    }
+    .about__text p{
+        margin-top: 1.5rem;
+    }
+    button.download__cv{
+        margin-top: 2rem;
+    }
+    div.services__container{
+        flex-direction: column;
+    }
+    div.service{
+        width: 80%;
+        padding: 3rem 2rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid var(--secondary-black);
+    }
+    div.skills{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    div.skill{
+        width: 100%;
+    }
+    div.tags{
+        flex-wrap: wrap;
+    }
+    span.tag{
+        margin-top: 1rem;
+    }
+    div.projects{
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    div.project img{
+        width: 80%;
+        height: 80%;
+    }
+    
+
+
+    
+    div.project{
+        position: relative;
+        margin-top: 1rem;
+    }
+    
+    div.project img{
+        width: 342px;
+        height: 342px;
+    }
+    div.overlay{
+        background-color: #010206b0;
+        height: 322px;
+        width: 322px;
+        border: 10px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        opacity: 0;
+        transition: .2s opacity ease;
+        position: absolute;
+        top: 0;
+    }
+    div.overlay a{
+        color: var(--main-yellow);
+        font-weight: var(--medium-weight);
+        font-size: 18px;
+    }
+    div.project:hover div.overlay{
+        opacity: 1;
+    }
+    
+    
     
 }
