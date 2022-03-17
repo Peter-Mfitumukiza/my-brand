@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Teko:wght@300;400;500;600;700&display=swap');
 :root{
     --black-bg-color: #010206;
     --main-orange: #F55322;
@@ -61,9 +61,12 @@ a.bars{
     font-weight: var(--regular-weight);
     cursor:pointer;
     transition: .5s width ease;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    font-family: Teko, sans-serif;
 }
-nav, div.hero, div.about__me, div.my__skills, div.my_projects, div.my__services{
+nav, div.hero, div.about__me, 
+div.my__skills, div.my_projects, 
+div.my__services, div.blogs__and__articles{
     padding: 0 115px;
 }
 
@@ -211,10 +214,10 @@ span.role{
 }
 button.download__cv{
     margin-top: 4rem;
-    width: 125px;
+    width: 95px;
 }
 button.download__cv:hover{
-    width: 200px;
+    width: 160px;
 }
 
 /* Styles for My skills */
@@ -359,6 +362,45 @@ div.service h2{
     margin: 2rem 0;
 }
 
+/* Styles for blogs and articles */
+div.blogs__and__articles{
+    padding: 40px 115px;
+}
+div.blogs{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+div.blog{
+    width: 28%;
+    background-color: var(--secondary-black);
+    border-radius: 5px;
+}
+div.blog img{
+    width: 100%;
+}
+div.blog__text{
+    padding: 1rem;
+}
+div.blog__text h2{
+    font-size: 18px;
+    font-size: var(--regular-weight);
+    margin-bottom: 1rem;
+}
+div.blog__text p{
+    color: var(--gray-text);
+    font-size: 15px;
+    margin-bottom: 1.5rem;
+}
+button.read__story{
+    width: 70px;
+    padding: 5px 10px;
+
+}
+button.read__story:hover{
+    width: 120px;
+}
+
 @media only screen and (max-width: 430px) {
     div.links{
         display: none;
@@ -491,7 +533,4 @@ div.service h2{
     div.project:hover div.overlay{
         opacity: 1;
     }
-    
-    
-    
 }
