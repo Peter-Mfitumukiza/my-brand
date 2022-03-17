@@ -401,6 +401,75 @@ button.read__story:hover{
     width: 120px;
 }
 
+/* Styles for get in touch section */
+div.contact{
+    padding: 40px 115px;
+    background-color: #14171E;
+}
+div.contact form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+div.form-control{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+div.short__input{
+    width: 42%;
+}
+div.contact label{
+    display: block;
+    color: #6C7175;
+    font-size: 14px;
+}
+div.contact input, div.contact textarea{
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid #6C7175;
+    color: white;
+    padding: 3px 0;
+    width: 100%;
+    font-size: 15px;
+}
+div.contact textarea{
+    height: 4rem;
+}
+button.send__message{
+    width: 80px;
+}
+button.send__message:hover{
+    width: 135px;
+}
+
+/* Styles for footer */
+
+footer{
+    padding: 40px 115px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+div.footer__icons{
+    display: flex;
+}
+div.icon__container{
+    margin-right: 1.5rem;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 1.5rem;
+}
+div.icon__container i{
+    color: var(--white);
+    font-size: 14px;
+}
+footer span{
+    font-size: 15px;
+    font-family: Teko, sans-serif;
+    letter-spacing: 2px;
+}
+
 @media only screen and (max-width: 430px) {
     div.links{
         display: none;
@@ -444,7 +513,9 @@ button.read__story:hover{
         transform: translateX(50%);
         margin-bottom: 3rem;
     }
-    div.about__me, div.my__skills, div.my__services, div.my__projects{
+    div.about__me, div.my__skills, 
+    div.my__services, div.my__projects, 
+    div.blogs__and__articles, div.contact{
         padding: 30px;
     }
     div.about__container{
@@ -494,43 +565,22 @@ button.read__story:hover{
         flex-direction: column;
     }
     div.project img{
-        width: 80%;
-        height: 80%;
-    }
-    
-
-
-    
-    div.project{
-        position: relative;
-        margin-top: 1rem;
-    }
-    
-    div.project img{
         width: 342px;
         height: 342px;
     }
-    div.overlay{
-        background-color: #010206b0;
-        height: 322px;
-        width: 322px;
-        border: 10px solid rgb(255, 255, 255);
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    div.blogs{
+        margin-top: 4rem;
         flex-direction: column;
-        opacity: 0;
-        transition: .2s opacity ease;
-        position: absolute;
-        top: 0;
     }
-    div.overlay a{
-        color: var(--main-yellow);
-        font-weight: var(--medium-weight);
-        font-size: 18px;
+    div.blog{
+        width: 100%;
+        margin-bottom: 1rem;
     }
-    div.project:hover div.overlay{
-        opacity: 1;
+    div.short__input{
+        width: 100%;
+    }
+    footer span{
+        width: 100vw;
+        text-align: center;
     }
 }
