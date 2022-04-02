@@ -1,2 +1,187 @@
 @import url('./global.css');
 
+body{
+    height: 100vh;
+    display: flex;
+}
+a:hover{
+    color: white;
+}
+div.sidebar{
+    width: 20%;
+    background-color: #0E121B;
+    height: 87.5vh;
+    padding: 40px 1.5rem;
+    position: fixed;
+}
+div.current__user{
+    display: flex;
+    margin: 1.5rem 0;
+    background-color: #282D39;
+    padding: .8rem;
+    border-radius: 5px;
+}
+.profile__img{
+    height: 31px;
+    width: 30.8px;
+    border-radius: 50%;
+    /* margin-right: .8rem; */
+}
+div.name__and__role{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+span.name{
+    font-weight: var(--semi-bold);
+    font-size: 14px;
+}
+span.role{
+    color: #919EAB;
+    font-size: 14px;
+}
+ul.dashboard__list{
+    list-style: none;
+}
+.dashboard__list li{
+    padding: .8rem;
+    border-radius: 5px;
+}
+li a{
+    font-size: 16px;
+}
+li a:hover{
+    color: var(--white);
+}
+.dashboard__list i{
+    width: 1.5rem;
+    margin-right: .5rem;
+}
+.dashboard__list li:hover, .dashboard__list li.active{
+    background-color: #212B36;
+}
+
+/* Styles for the main ground */
+
+div.main__ground{
+    width:80%;
+    padding: 40px;
+    margin-left: 24%;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+div.header__icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+}
+header i{
+    cursor: pointer;
+}
+h1.welcome__text{
+    font-size: 24px;
+    font-weight: var(--semi-bold);
+    margin: 3rem 0 2rem;
+}
+div.stats{
+    display: flex;
+    justify-content: space-between;
+}
+div.stat{
+    background-color: #C8FACD;
+    width: 15%;
+    height: 150px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+span.stat__number{
+    font-size: 32px;
+    font-weight: var(--semi-bold);
+    color: #000;
+}
+span.stat__text{
+    color: rgba(0, 0, 0, .66);
+    margin-top: .4rem;
+}
+
+/* Recent Blogs */
+div.blogs{
+    margin-top: 0;
+    width: 90%;
+    padding-bottom: 2rem;
+}
+div.blog img{
+    height: 150px;
+}
+div.blog__text h2{
+    font-size: 14px;
+    font-weight: medium;
+    margin-bottom: .5rem;
+}
+div.blog__text p{
+    font-size: 14px;
+}
+button.read__story:hover{
+    width: 100px;
+}
+div.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fa-pen{
+    background-color: #187822;
+    padding: 5px;
+    border-radius: 3px;
+    margin-right: .3rem;
+}
+.fa-trash{
+    background-color: #FF2E00;
+    padding: 5px;
+    border-radius: 3px;
+}   
+
+@media only screen and (max-width: 430px) {
+    div.sidebar{
+        display: none;
+    }
+    div.left__one{
+        display: flex;
+        align-items: center;
+    }
+    .fa-bars{
+        margin-right: 1rem;
+    }
+    div.main__ground{
+        width:100%;
+        padding: 30px;
+        margin-left: 0;
+    }
+    div.header__icons{
+        width: 35%;
+    }
+    header i{
+        font-size: 18px;
+    }
+    div.stats{
+        flex-wrap: wrap;
+    }
+    div.stat{
+        width: 45%;
+        margin-top: 1rem;
+        height: 180px;
+    }
+    div.blogs{
+        width: 100%;
+        flex-direction: column;
+    }
+    div.blog img{
+        height: 220px;
+    }
+}

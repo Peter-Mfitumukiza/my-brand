@@ -269,40 +269,6 @@ div.service h2{
 div.blogs__and__articles{
     padding: 40px 115px;
 }
-div.blogs{
-    margin-top: 4rem;
-    display: flex;
-    justify-content: space-between;
-}
-div.blog{
-    width: 28%;
-    background-color: var(--secondary-black);
-    border-radius: 5px;
-}
-div.blog img{
-    width: 100%;
-}
-div.blog__text{
-    padding: 1rem;
-}
-div.blog__text h2{
-    font-size: 18px;
-    font-size: var(--regular-weight);
-    margin-bottom: 1rem;
-}
-div.blog__text p{
-    color: var(--gray-text);
-    font-size: 15px;
-    margin-bottom: 1.5rem;
-}
-button.read__story{
-    width: 70px;
-    padding: 5px 10px;
-
-}
-button.read__story:hover{
-    width: 120px;
-}
 
 /* Styles for get in touch section */
 
@@ -444,10 +410,7 @@ button.send__message:hover{
         margin-top: 4rem;
         flex-direction: column;
     }
-    div.blog{
-        width: 100%;
-        margin-bottom: 1rem;
-    }
+    
     div.short__input{
         width: 100%;
     }
