@@ -49,6 +49,7 @@ ul.dashboard__list{
 .dashboard__list li{
     padding: .8rem;
     border-radius: 5px;
+    margin-bottom: .5rem;
 }
 li a{
     font-size: 16px;
@@ -150,6 +151,61 @@ div.buttons{
     border-radius: 3px;
 }   
 
+/* Styles for blogs page */
+
+div.welcome__and__post{
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0 2rem;
+}
+div.welcome__and__post h1{
+    margin: 0;
+}
+div.welcome__and__post a{
+    background-color: var(--main-orange);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: var(--semi-bold);
+}
+div.search__and__sort{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 3rem;
+    z-index: -1;
+}
+.search__and__sort select{
+    background-color: transparent;
+    border: 2px solid #202938;
+    border-radius: 5px;
+    color: white;
+    padding: 0 0rem 0 .5rem ;
+}
+.search input{
+    height: 35px;
+    border: 2px solid #202938;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #6C7175;
+    font-size: 1rem;
+    font-weight: var(--regular-weight);
+    padding-left: 2.5rem;
+}
+.search i{
+    position: absolute;
+    color: #6C7175;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1rem;
+}
+div.blogs__page__blogs{
+    flex-wrap: wrap;
+}
+.blogs__page__blogs .blog{
+    margin-top: 1rem;
+    width: 30%;
+}
+
 @media only screen and (max-width: 430px) {
     div.sidebar{
         width: 50%;
@@ -200,5 +256,14 @@ div.buttons{
     }
     div.blog img{
         height: 220px;
+    }
+
+    /* Blogs page styles */
+
+    div.search__and__sort input{
+        width: 60%;
+    }
+    .blogs__page__blogs .blog{
+        width: 100%;
     }
 }

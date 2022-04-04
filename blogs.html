@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/dashboard.css">
-    <title>Admin - Dashboard</title>
+    <title>Blogs - Dashboard</title>
 </head>
 <body>
     <div class="sidebar">
@@ -23,11 +23,11 @@
             </div>
         </div>
         <ul class="dashboard__list">
-            <li class="active">
-                <i class="fa-solid fa-house"></i><a href="#">Dashboard</a>
-            </li>
             <li>
-                <i class="fa-brands fa-blogger"></i><a href="blogs.html">Blogs</a>
+                <i class="fa-solid fa-house"></i><a href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="active">
+                <i class="fa-brands fa-blogger"></i><a href="#">Blogs</a>
             </li>
             <li>
                 <i class="fa-solid fa-message"></i><a href="#">Messages</a>
@@ -52,31 +52,35 @@
                 <img src="images/blog-2 1.png" class="profile__img" alt="profile image">
             </div>
         </header>
-        <h1 class="welcome__text">Hi, Welcome back!</h1>
-        <div class="stats">
-            <div class="stat">
-                <span class="stat__number">432</span>
-                <span class="stat__text">Blog Posts</span>
-            </div>
-            <div class="stat" style="background-color: #FFF7CD;">
-                <span class="stat__number">200</span>
-                <span class="stat__text">Subscribers</span>
-            </div>
-            <div class="stat" style="background-color: #D0F2FF;">
-                <span class="stat__number">100k</span>
-                <span class="stat__text">Users</span>
-            </div>
-            <div class="stat" style="background-color: #FAE7D9;">
-                <span class="stat__number">500</span>
-                <span class="stat__text">Comments</span>
-            </div>
-            <div class="stat" style="background-color: #C8FACD;">
-                <span class="stat__number">200k</span>
-                <span class="stat__text">Visited your site</span>
-            </div>
+        <div class="welcome__and__post">
+            <h1 class="welcome__text">Blogs</h1>
+            <a href="newBlog.html" class="new__post"> <i class="fa-solid fa-plus"></i> New Post</a>
         </div>
-        <h1 class="welcome__text">Recent Blogs</h1>
-        <div class="blogs">
+        <div class="search__and__sort">
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search artice...">
+            </div>
+            <select name="sortby" id="">
+                <option value="latest">Latest</option>
+                <option value="old">Old</option>
+            </select>
+        </div>
+        <div class="blogs blogs__page__blogs">
+            <div class="blog">
+                <img src="./images/blog-1 1.png" alt="Blog 1 cover photo">
+                <div class="blog__text">
+                    <h2>Best article in the world by Peter Mfitumukiza</h2>
+                    <p>Other visual stylings like exposed brick and...</p>
+                    <div class="buttons">
+                        <button class="halved__btn read__story">READ STORY</button>
+                        <div class="edit__and__delete">
+                            <a href=""><i class="fa-solid fa-pen"></i></a>
+                            <a href=""><i class="fa-solid fa-trash"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="blog">
                 <img src="./images/blog-1 1.png" alt="Blog 1 cover photo">
                 <div class="blog__text">
@@ -122,7 +126,7 @@
         </div>
     </div>
 
-    <script src="js/dashboard.js"></script>
 
+    <script src="js/dashboard.js"></script>
 </body>
 </html>
