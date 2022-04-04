@@ -14,6 +14,10 @@ div.sidebar{
     padding: 40px 1.5rem;
     position: fixed;
 }
+.fa-xmark{
+    font-size: 20px;
+    display: none;
+}
 div.current__user{
     display: flex;
     margin: 1.5rem 0;
@@ -25,7 +29,6 @@ div.current__user{
     height: 31px;
     width: 30.8px;
     border-radius: 50%;
-    /* margin-right: .8rem; */
 }
 div.name__and__role{
     display: flex;
@@ -149,7 +152,21 @@ div.buttons{
 
 @media only screen and (max-width: 430px) {
     div.sidebar{
-        display: none;
+        width: 50%;
+        transform: translateX(-100%);
+        transition: all .5s ease;
+    }
+    div.sidebar.show{
+        transform: translateX(0);
+    }
+    div.img__and__close{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .fa-xmark{
+        display: block;
+        cursor: pointer;
     }
     div.left__one{
         display: flex;

@@ -11,9 +11,12 @@
 </head>
 <body>
     <div class="sidebar">
-        <img src="images/logo.png" alt="logo">
+        <div class="img__and__close">
+            <img src="images/logo.png" alt="logo">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
         <div class="current__user">
-            <img src="images/blog-2 1.png" class="profile__img" alt="profile image">
+            <img src="images/blog-2 1.png" style="margin-right: .8rem;" class="profile__img" alt="profile image">
             <div class="name__and__role">
                 <span class="name">Mfitumukiza Peter</span>
                 <span class="role">Admin</span>
@@ -40,7 +43,7 @@
     <div class="main__ground">
         <header>
             <div class="left__one">
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars" id="bars"></i>
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div class="header__icons">
@@ -118,5 +121,8 @@
             </div>
         </div>
     </div>
+
+    <script src="js/dashboard.js"></script>
+
 </body>
 </html>

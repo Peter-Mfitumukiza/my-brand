@@ -35,6 +35,9 @@ a:hover{
     font-size: 25px;
     display: none;
 }
+.fa-xmark{
+    display: none;
+}
 .fa-brands:hover{
     color: var(--main-orange);
     cursor: pointer;
@@ -86,6 +89,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     margin-top: 40px;
+    transition: all .5s ease;
 }
 div.links{
     width: 50%;
@@ -165,6 +169,46 @@ footer span{
     .fa-bars{
         display: block;
         cursor: pointer;
+    }
+    nav.show{
+        height: 100vh;
+        background-color: white;
+        margin-top: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: unset;
+        padding-top: 3rem;
+    }
+    .show div.links{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .show div.links a{
+        color: #333;
+        font-size: 18px;
+        font-weight: var(--semi-bold);
+        margin-bottom: .7rem;
+    }
+    .show .fa-bars{
+        display: none;
+    }
+    .show a.login{
+        border: 0;
+        padding: 0;
+    }
+    .show div.img__and__close{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .show .fa-xmark{
+        font-size: 20px;
+        display: block;
+        cursor: pointer;
+        color: #333;
     }
     footer span{
         width: 100vw;
