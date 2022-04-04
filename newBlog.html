@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/dashboard.css">
+    <title>New Post</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="img__and__close">
+            <img src="images/logo.png" alt="logo">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="current__user">
+            <img src="images/blog-2 1.png" style="margin-right: .8rem;" class="profile__img" alt="profile image">
+            <div class="name__and__role">
+                <span class="name">Mfitumukiza Peter</span>
+                <span class="role">Admin</span>
+            </div>
+        </div>
+        <ul class="dashboard__list">
+            <li>
+                <i class="fa-solid fa-house"></i><a href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="active">
+                <i class="fa-brands fa-blogger"></i><a href="#">Blogs</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-message"></i><a href="#">Messages</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-user"></i><a href="#">Profile</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-arrow-right-from-bracket"></i><a href="">Logout</a>
+            </li>
+        </ul>
+    </div>
+    <div class="main__ground">
+        <header>
+            <div class="left__one">
+                <i class="fa-solid fa-bars" id="bars"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="header__icons">
+                <i class="fa-solid fa-message"></i>
+                <i class="fa-solid fa-bell"></i>
+                <img src="images/blog-2 1.png" class="profile__img" alt="profile image">
+            </div>
+        </header>
+        <h1 class="welcome__text">Create a new post</h1>
+        <form action="">
+            <section class="section__one">
+                <input type="text" placeholder="Post title">
+                <input type="text" placeholder="Description">
+                <label for="content">Content</label>
+                <textarea placeholder="Write something awesome" name="content" id="content">
+                </textarea>
+                <label for="cover">Cover Image</label>
+                <input type="file" id="cover" name=""cover>
+            </section>
+            <section class="section__two">
+                <div>
+                    <label for="publish">Publish</label>
+                    <input type="checkbox" name="publish" id="publish">
+                </div>
+                <div>
+                    <label for="comments">Enable comments</label>
+                    <input type="checkbox" name="comments" id="comments">
+                </div>  
+                <button>Post</button>
+            </section>
+        </form>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
