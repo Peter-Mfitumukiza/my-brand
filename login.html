@@ -31,11 +31,11 @@
         <p>Create, Edit and Manage your articles and blogs accessed by the whole world!</p>
     </div>
     <div class="forms">
-        <form>
-            <input type="text" placeholder="Email Adress">
-            <!-- <span class="label__forgot__password">Forgot Password?</span> -->
-            <input type="password" placeholder="Password">
-            <button class="btn"><a href="dashboard.html">Login</a></button>
+        <form id="loginForm">
+            <span class="error" id="errorContainer"></span>
+            <input id="email" type="text" placeholder="Email Adress">
+            <input id="password" type="password" placeholder="Password">
+            <button class="btn">Login</button>
         </form>
         <span class="divider">OR</span>
         <div class="auth__buttons">
@@ -50,5 +50,45 @@
         <span>Copyright@Peter 2022</span>
     </div>
     <script src="js/home.js"></script>
+    <script>
+            const loginForm = document.getElementById('loginForm');
+            loginForm.addEventListener('submit', async (event)=>{
+                event.preventDefault();
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
+                let errorContainer = document.getElementById("errorContainer");
+                errorContainer.style.display = "none";
+                if(email == ""){
+                    errorContainer.innerText = "Email is required";
+                    errorContainer.style.display = "block"
+                    return;
+                }
+                if(password == ""){
+                    errorContainer.innerText = "Password is required";
+                    errorContainer.style.display = "block";
+                    return;
+                }
+
+                const res = await fetch(
+                    'https://backend-mybrand.herokuapp.com/users/login',
+                    {
+                        method: "POST",
+                        headers:{ "Content-Type": "application/json;charset=utf-8" },
+                        body: JSON.stringify({ email, password })
+                    }
+                );
+                let response = await res.json();
+                if(response.status == "success"){
+                    localStorage.setItem("currentUserInfo", JSON.stringify({
+                        data: response.data,
+                        token: response.token
+                    }));
+                    document.location.href = "dashboard.html";
+                }else{
+                    errorContainer.innerText = response.message;
+                }
+            })
+            
+    </script>
 </body>
 </html>
